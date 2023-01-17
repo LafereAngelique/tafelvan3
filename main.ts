@@ -1,15 +1,14 @@
 let tafel3 = 0
+basic.pause(1000)
 basic.forever(function () {
-    for (let index = 0; index < 1000; index++) {
-        if (tafel3 < 12) {
-            for (let index = 0; index < 4; index++) {
-                tafel3 += 3
-                basic.pause(1000)
-            }
-        } else {
-            tafel3 = 0
-            basic.showNumber(tafel3)
-            basic.pause(1000)
-        }
+    if (tafel3 < 13) {
+        basic.pause(1000)
+        tafel3 += 3
+    } else {
+        basic.pause(1000)
+        tafel3 = 0
     }
+})
+basic.forever(function () {
+    basic.showNumber(tafel3)
 })
